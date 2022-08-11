@@ -29,7 +29,7 @@ const ResponsiveMenu = ( { show, onClose, showSearch, onSearch } ) => {
                 <div className="inner">
                     <div className="header-top">
                         <div className="logo">
-                            <Link to={process.env.PUBLIC_URL + '/' }>
+                            <Link to={ '/' }>
                                 <img src="/images/logo/ing-light.png" alt="Main Logo" />
                             </Link>
                         </div>

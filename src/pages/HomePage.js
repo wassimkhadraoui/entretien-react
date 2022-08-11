@@ -1,17 +1,29 @@
 import React from 'react';
 import HeaderLandingPage from '../common/header/HeaderLandingPage';
 import LandingFAQ from '../components/landing-faq/LandingFAQ';
+
 import LandingFooter from '../common/footer/HomeFooter';
 import { Link as ScrollTo } from 'react-scroll';
 import { Element } from 'react-scroll';
-const LandingDemo = () => {
+import { useEffect, useState } from 'react';
+
+const HomePage = () => {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() => {
+      fetch('http://localhost:3002/users')
+        .then((res) => res.json())
+        .then((result) => {
+          setPosts(result);
+        });
+    }, []);
     return (
         <>
 
             <HeaderLandingPage styles="header-transparent" />
 
             <Element
-            name="cleint"
+            name="client"
             className="slider-area home-landing-banner bg-image"
         >
             <div className="d-flex align-items-center height-800">
@@ -48,7 +60,6 @@ const LandingDemo = () => {
                 </div>
             </div>
         </Element>
-            
             <LandingFAQ />
             
             <LandingFooter />
@@ -56,4 +67,4 @@ const LandingDemo = () => {
     )
 }
 
-export default LandingDemo;
+export default HomePage;

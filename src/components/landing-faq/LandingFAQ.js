@@ -32,7 +32,7 @@ const CustomToggle = ({ children, eventKey }) => {
     return <button type="button" onClick={decoratedOnClick} aria-expanded={ isCurrentEventKey ? true : false } className="edu-accordion-button">{children}</button>
 }
 
-const LandingDemoFAQ = () => {
+const LandingFAQ = () => {
     const [activeId, setActiveId] = useState( '0' );
     function toggleActive( id ) {
         if (activeId === id) {
@@ -42,39 +42,46 @@ const LandingDemoFAQ = () => {
         }
     }
     return (
+        <>
+        
+        <div className=" projets-style-1 edu-section-gap ">
+       
+    </div>
         <Element
             name="faq"
-            className="landing-demo-faq-wrapper edu-accordion-area accordion-shape-1 edu-section-gap bg-color-white"
+            className="landing-faq-wrapper edu-accordion-area accordion-shape-1 edu-section-gap bg-color-white"
         >
       
             <div className="container Loreiumbe-animated-shape">
                 <div className="row">
+                    <h1>What is Lorem Ipsum?</h1>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <div className="read-more-btn">
                                             <div className="video-btn-wrapper" >
                                                 <button  className="video-play-btn with-animation video-popup-activation">
                                                     <span className="play-icon"></span>
                                                 </button>
                                                 <span className="video-text">Gérer au quatidien</span>
-                                            </div>
-                                            
-                                            <div className="video-btn-wrapper" >
-                                                <button  className="video-play-btn with-animation video-popup-activation">
+                                                <div style={{position: 'relative' ,left: 600, top:-50 }}>
+                                                <button  className="video-play-btn with-animation video-popup-activation" >
                                                     <span className="play-icon"></span>
                                                 </button>
                                                 <span className="video-text">Investir</span>
-                                            </div>
-                                            <div className="video-btn-wrapper" >
-                                                <button  className="video-play-btn with-animation video-popup-activation">
-                                                    <span className="play-icon"></span>
-                                                </button>
-                                                <span className="video-text">Investir</span>
+                                                </div>
                                             </div>
                                             <div className="video-btn-wrapper" >
                                                 <button  className="video-play-btn with-animation video-popup-activation">
                                                     <span className="play-icon"></span>
                                                 </button>
+                                                <span className="video-text">Gérer au quatidien</span>
+                                                <div style={{position: 'relative' ,left: 600, top:-50 }}>
+                                                <button  className="video-play-btn with-animation video-popup-activation" >
+                                                    <span className="play-icon"></span>
+                                                </button>
                                                 <span className="video-text">Investir</span>
+                                                </div>
                                             </div>
+                                         
                                         </div>
                     <div className="col-lg-12">
 
@@ -105,22 +112,21 @@ const LandingDemoFAQ = () => {
                                 }
                             </Accordion>
                         </ScrollAnimation>
+                     
                     </div>
+             
                 </div>
 
-                <div className="shape-wrapper">
-                    <div className="shape-dot-wrapper shape-wrapper d-xl-block d-none">
-                        <div className="animate-image shape-image-1">
-                            <img src="/images/shapes/shape-11-11.png" alt="Shape Thumb" />
-                        </div>
-                        <div className="animate-image shape-image-2">
-                            <img src="/images/shapes/shape-14-01.png" alt="Shape Thumb" />
-                        </div>
-                    </div>
-                </div>
+            
             </div>
         </Element>
+        <div className="quote-icon quote-user d-none d-md-block ml--15 ml_sm--5">
+                                        <a className="test-btn2 "  target="_blank" >
+                                            D'autres questions
+                                        </a>
+                                    </div>
+        </>
     )
 }
 
-export default LandingDemoFAQ;
+export default LandingFAQ;

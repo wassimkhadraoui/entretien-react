@@ -138,9 +138,7 @@
                 margin: 0 auto;
                 display: block;
             }
-            img {
-                
-            }
+          
             .shape-list {
                 .shape {
                     position: absolute;
@@ -676,7 +674,6 @@
     position: relative;
     &:first-child {
         &::after {
-            background-image: url(../../images/shape/arrow-down.png);
             content: "";
             width: 155px;
             height: 43px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavLandingDemo from './NavHome';
+import NavHome from './NavHome';
 
 const NavLandingResponsiveMenu = ( { show, onClose, showSearch, onSearch } ) => {
 
@@ -23,7 +23,7 @@ const NavLandingResponsiveMenu = ( { show, onClose, showSearch, onSearch } ) => 
                             </button>
                         </div>
                     </div>
-                    <NavLandingDemo />
+                    <NavHome />
                 </div>
             </div>
 
